@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* grid items */
+nav {
+    grid-area: nav;
+}
+
+aside {
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* .grid-item {
+    background-color: palegreen;
+    outline: 1px solid red;
+} */
+
+body {
+    /* width: 654px; */
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+        "nav nav nav"
+        "aside main article"
+        "footer footer footer";
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr 1fr;
+}
