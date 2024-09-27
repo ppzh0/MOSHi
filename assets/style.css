@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "SimSun";
+    src: local("SimSun"), url(simsun.ttc);
+}
+
+/* @font-face {
+    font-family: Eva;
+    src: local("EVA-Matisse_Classic EB"), url(C://Windows/Fonts/EVA-Matisse_Classic.ttf);
+} */
+
 *,
 *::before,
 *::after {
@@ -27,13 +37,21 @@ footer {
 } */
 
 body {
-    /* width: 654px; */
+    max-width: 70dvw;
+    font-family: "SimSun", system-ui, sans-serif;
+
     margin: auto;
     display: grid;
     grid-template-areas:
-        "nav nav nav"
-        "aside main article"
-        "footer footer footer";
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 1fr 2fr 1fr;
+        "nav nav"
+        "main article"
+        "main aside"
+        "footer footer";
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 2fr 1fr;
+}
+
+#siteName {
+    display: block;
+    font-size: 3em;
 }
