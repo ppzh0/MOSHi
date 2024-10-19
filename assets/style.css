@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "SimSun";
-    src: local("SimSun"), url(simsun.ttc);
+    font-family: 'SimSun';
+    src: local('SimSun'), url(simsun.ttc);
 }
 
 /* @font-face {
@@ -12,6 +12,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    image-rendering: pixelated;
+    letter-spacing: 3px;
     /* enable outline for layout debug */
     /* outline: 1px green solid; */
 }
@@ -19,7 +21,16 @@
 /* link display */
 p {
     text-align: justify;
-    word-break: break-all;
+    /* word-break: break-all; */
+}
+
+a:link, a:visited {
+    color: #d2738a;
+    font-style: italic;
+}
+
+a:hover {
+    animation: wiredB .8s ease-out infinite;
 }
 
 /* grid items */
@@ -46,7 +57,13 @@ footer {
 
 body {
     max-width: 70dvw;
-    font-family: "SimSun", system-ui, sans-serif;
+    font-family: 'Times New Roman', 'SimSun', system-ui, sans-serif;
+
+    /* https://fauux.neocities.org/ */
+    background-image: url(img/3x.gif);
+    background-image: url(img/512x.gif) ;
+    background-color: rgba(0, 0, 0, 0);
+    color: #c1b492;
 
     margin: auto;
     display: grid;
@@ -62,6 +79,7 @@ body {
 
 #siteName {
     display: block;
+    font-family: 'SimSun', serif;
     font-size: 3em;
 }
 
@@ -87,5 +105,12 @@ body {
             "main main"
             "article aside"
             "footer footer";
+    }
+}
+
+@keyframes wiredB {
+    50% {
+        color: #c1b492;
+        text-shadow: #d2738a 1px 4px 5px;
     }
 }
