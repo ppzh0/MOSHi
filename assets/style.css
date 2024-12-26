@@ -20,6 +20,7 @@
 /* link display */
 p {
     text-align: justify;
+    text-transform: lowercase;
 }
 
 /* grid items */
