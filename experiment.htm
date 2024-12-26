@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End Of Evangelion</title>
+
+    <!-- NOTE -->
+    <!-- 
+        Apparently, the font is not rendering in the browser. Its size is too 
+        large for rendering on webpages (3340KB ≈ 3.2MB). And the font is from 
+        a japanese company, which makes printers. Even after converting from 
+        .ttf to .woff2, the file size is 1816KB ≈ 1.7MB. VS code extensions 
+        cannot even render the font. But it works perfectly in office programs
+        and windows font viewer.
+    -->
+    <!-- Time Wasted: 2 hours -->
+
+    <style>
+        @font-face {
+            font-family: EPKaiSho;
+            src: url(./assets/EPKAISHO.TTF) format(truetype);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            font-family: EPKaiSho, sans-serif;
+
+            display: grid;
+            place-items: center;
+        }
+
+        h1#testSubject {
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="testSubject">End of Evangelion</h1>
+</body>
+
+</html>
